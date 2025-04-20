@@ -58,4 +58,3 @@ jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
   }
 });
 
-

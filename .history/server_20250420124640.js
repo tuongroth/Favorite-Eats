@@ -41,21 +41,3 @@ const startServer = async () => {
 
 // Khởi chạy server
 startServer();
-
-// Ví dụ sử dụng SECRET_KEY (dùng cho JWT hoặc mã hóa)
-// Nếu muốn sử dụng SECRET_KEY trong các tác vụ bảo mật:
-const jwt = require('jsonwebtoken');
-
-const token = jwt.sign({ userId: 12345 }, process.env.SECRET_KEY, { expiresIn: '1h' });
-console.log('JWT Token:', token);
-
-// Kiểm tra token
-jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
-  if (err) {
-    console.error('Invalid token');
-  } else {
-    console.log('Decoded token:', decoded);
-  }
-});
-
-
